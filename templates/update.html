@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="text-center forgot">
+    <div class="forgot-center">
+        <h3 class="pt-4 pb-2"><span class="spec-clr">Reset</span> Password</h3>
+        {% if info %}
+            <p class="pt-4 text-danger">{{info}} !</p>
+        {% endif %}
+    <form action="" method="post">
+        {{form.hidden_tag()}}
+
+        {{form.code.label(class="pt-2 pb-2")}} <br>
+        {{form.code(class="mb-5",placeholder="Paste the code here", id="inp")}} <br>
+        {{form.submit(class="mb-3 mt-2",id="inp")}} <br>
+    </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block main %}
+
+{% endblock %}

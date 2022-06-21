@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+{% block content %}
+
+<div class="row log">
+    <div class="col text-center box-log">
+        <h3 class="mb-2 p-5">Log-in</h3><hr>
+        <p class="topping">Wanna play tha game?</p>
+    <form action="#" method="post">
+        {{form.hidden_tag()}}
+        {% if msg %}
+            <p class="m-5 bg-warning bg-opacity-25 msg">{{msg}} !</p>
+        {% endif %}
+        {% if msg2 %}
+            <p class="m-5 bg-warning bg-opacity-25 msg">{{msg2}} !</p>
+        {% endif %}
+        <p>{{form.username.label()}}</p>
+        {{form.username(class="mb-4", id="inp", placeholder="Enter your username")}}
+        <p>{{form.password.label()}}</p>
+        {{form.password(id="inp", placeholder="Enter your Password")}}
+        <p class="mb-2 pb-2 mt-2 pt-2"><a href="#"  onclick="display()">Forgot your password? </a></p>
+        <p class="mb-5 pb-4"><a href="#" class="hid-forgot text-opacity-75">We will sent an email, check your both spam and inbox folders and <br> paste the <a href="/resetpassword" class="hid-forgot forgot-a">code here</a>  </a></p>
+        <p style="font-size: 1.2rem;">New to <strong>Manage?</strong> <a href="/sign-in" style="text-decoration: underline;"> Create an account </a></p>
+        {{form.submit(class="mb-3",placeholder="{{form.submit.label()}}", id="inp")}}
+
+    </form>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block main %}
+{% endblock %}

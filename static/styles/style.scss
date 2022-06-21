@@ -1,0 +1,540 @@
+$clr:#012970;
+$clr2:#013289;
+$clr3:#4154f1;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+body{
+    background-color: white;
+    width: 100%;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    background-color: transparent !important;
+    padding: 10px 0em 2em 2em;
+    position: fixed;
+    z-index: 2;
+    transition: all 1s;
+
+    .navbar-brand{
+        font-size: 2rem;
+        color: $clr;
+        font-weight: 700;
+        padding: 10px 0em 0em 2em;
+
+    }
+    .nav-item{
+        padding-left: 2em;
+        padding: 10px 0em 0em 2em;
+        font-size: 1.2rem;
+        font-weight: 550;
+        .nav-link{
+            color: $clr2 !important;
+            white-space: nowrap;
+
+        }
+        .activate{
+            color: $clr2 !important;
+        }
+        .sign-a{
+            text-decoration: none;
+            font-size: 1rem;
+            button{
+                padding: 7.8px;
+                border-radius: 4px;
+                background-color: $clr3;
+                color: white !important;
+                font-weight: 700;
+                border-color: $clr3;
+            }            
+        }
+        .disabled-color{
+            color: gray !important;
+        }
+    }
+}
+.remain-flex{
+    display: flex;
+    margin-top: -15px;
+    margin-bottom: -33px;
+    padding: 17px;
+
+
+
+}
+
+#sign{
+    flex-grow: 0.5;
+    text-align: right;
+}
+#hid{
+    display: none;
+}
+
+
+
+@media all and (max-width:1280px) {
+    .remain-flex{
+        display: none;
+    }  
+    #hid{
+        display: unset;
+    }
+    .hid-button{
+        position: relative;
+        left: 17em;
+    }    
+}
+@media all and (max-width:776px) {
+    .navbar .navbar-brand{
+        padding: 10px 0em 0em 0.5em;
+    }
+        
+}
+
+.hero{
+    opacity: 1;
+    .row{
+        padding: 10em 15em 10em 8em;
+        background-image: url("../assets/hero-bg.png");
+        background-size: auto;
+        z-index: 1;
+        perspective: 3500px;
+        background-repeat: no-repeat;
+        h1{
+            color: $clr2;
+            font-weight: 600;
+            font-size: 3rem;
+            padding-top: 40px;
+        }
+        .sub-head{
+            font-size: 2.4rem;
+            opacity: 80%;
+            color: grey;
+            padding: 5px;
+        }
+        img{
+            max-width: 120%;
+        }
+    }
+}
+
+@media all and (max-width:776px){
+    .hero .row img{
+        max-width: 180%;
+        padding-top: 2em;
+    }
+    .hid-button{
+        position: relative;
+        left: 12em;
+    }
+    .hero .row{
+        padding: 10em 8em 10em 6em;
+
+        h1{
+            font-size: 2.4rem;
+        }     
+        .sub-head{
+            font-size: 2rem;
+        }   
+    }
+    .navbar .nav-item{
+        background-color: white;
+    }
+    body{
+        width: 100%;
+        overflow-x: hidden !important;
+    }
+    .cursor{
+        font-size: 2rem;
+    } 
+}
+ 
+@media all and (max-width:1280px){
+    .hero .row img{
+        max-width: 180%;
+        padding-top: 2em;
+    } 
+}
+
+
+.cursor{
+    color: red;
+    font-weight: 600;
+    font-size: 3rem;
+    animation-name: blink;
+    animation-duration: 780ms;
+    animation-iteration-count: infinite;
+    animation-delay: -1ms;
+}
+
+@keyframes blink {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+
+.secondpage{
+    padding: 10em 15em 10em 8em;
+    background-image: url("../assets/hero-bg.png");
+    background-size: auto;
+    height: fit-content;
+    .box-head{
+        border: 5px solid transparent;
+        border-top-color: $clr3;
+        padding: 40px;
+        background-color: white;
+        margin: 0.4em;
+        transition: all 1s;
+        opacity: 0;
+        box-shadow:
+  2.7px 1.5px 2.7px rgba(0, 0, 0, 0.065),
+  6.9px 3.9px 6.9px rgba(0, 0, 0, 0.093),
+  14px 8px 14.2px rgba(0, 0, 0, 0.117),
+  28.8px 16.4px 29.2px rgba(0, 0, 0, 0.145),
+  79px 45px 80px rgba(0, 0, 0, 0.21)
+;
+
+      
+    }
+    .box-head:hover{
+        transform: scale(1.1) !important;
+    }
+
+}
+
+.explained{
+    padding: 4em;
+    margin: 6em;
+    .explain-head{
+        margin-bottom: 6em;
+    }
+    h3{
+        color: gray;
+        font-size: 3rem;
+    }
+    .game{
+        color: $clr2;
+        display: inline-block;
+    }
+    p{
+        font-size: 2rem;
+        opacity: 80%;
+    }
+    .para{
+        border-left: 2px solid $clr3;
+        font-size: 2rem;
+        perspective: 2000px;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        opacity: 1;
+        transition: all 1.6s ease-in;
+
+    }
+    .row{
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    .text-1{
+        transform: translateX(-180%);
+    }
+    .text-2{
+        transform: translateX(180%);
+    }
+}
+
+@media all and (max-width:776px){
+    .explained{
+        padding: 1em;
+        margin: 2em;
+
+        h3{
+            font-size: 2.5rem;
+        }
+        p{
+            font-size: 1.8rem;
+        }
+        .row{
+            padding-left: 0.5em;
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+            margin-right: 0.5em;
+
+        }
+    }
+}
+
+@media all and (max-width:1280px){
+    .secondpage{
+        padding: 10em 2em  10em 2em;
+    }
+}
+
+.href{
+    text-decoration: none;
+    font-size: large;
+    i:hover{
+        color: #013289 !important;
+        font-size: larger;
+    }
+}
+
+.sign{
+    padding-top: 8em;
+    padding-left: 22em;
+    padding-right: 22em;
+    .man{
+        color: $clr2;
+    }
+    .bord{
+        border: 2px solid $clr3;
+        border-radius: 15px;
+    }
+    #topper{
+        position: relative;
+        top: -30px;
+        background-color: white;
+        white-space: nowrap;
+        text-align: center;
+        margin-left: 15em;
+        margin-right: 15em;
+        
+    }
+    h3{
+        color: $clr2;
+        font-weight: 650;
+    }
+    form{
+        .msg{
+            font-size: 1rem;
+            border: 2px solid yellow;
+            border-radius: 40px;
+            padding: 5px;
+        }
+        #inp{
+            border-radius: 125px;
+            padding: 10px;
+            border: 3px solid $clr3;
+            // width: 30em;
+            width: 100%;
+        }
+        #inp:focus{
+            border: 1px solid $clr;
+        }
+
+        #proof{
+            text-align: left !important;
+            margin-left: 9em;
+            margin-right: 20em;
+            color: gray;
+            opacity: 85%;
+            white-space: nowrap;
+        }
+        #proof2{
+            @extend #proof;
+            color: $clr;
+            font-weight: 650;
+        }
+    }
+}
+
+.log{
+    padding-top: 8em;
+    padding-left: 26em;
+    padding-right: 26em;
+    padding-bottom: 2em;
+    .box-log{
+        border: 2px solid $clr3;
+        border-radius: 15px
+    }
+    h3{
+        color: $clr2;
+        font-weight: 650;
+    }
+    .topping{
+        position: relative;
+        top: -30px;
+        background-color: white;
+        margin-left: 15em;
+        margin-right: 15em;
+    }
+    form{
+        #inp{
+            border-radius: 125px;
+            padding: 10px;
+            border: 3px solid $clr3;
+            width: 100%;
+        }
+        #inp:focus{
+            border: 1px solid $clr;
+        }
+        a{
+            text-decoration: none;
+            color: $clr;
+        }
+        .hid-forgot{
+            display: none;
+            color: #e85d04;
+        }
+        .forgot-a{
+            color: $clr2;
+        }
+    }
+
+}
+
+.row-table{
+    margin-left: 6em;
+    margin-right: 6em;
+    margin-top: 11.4em;
+    h3{
+        color: gray;
+        font-size: 3rem;
+    }
+    .game{
+        color: $clr2;
+        display: inline-block;
+    }
+}
+
+
+@media all and(max-width:1512px){
+    .sign {
+        padding-top: 8em;
+        padding-left: 4em;
+        padding-right: 4em;
+        #topper {
+            margin-left: 14em;
+            margin-right: 15em;
+        }
+        form #inp {
+            border-radius: 125px;
+            padding: 8px;
+            border: 3px solid #4154f1;
+            margin-left: -2em;
+        }
+        form #proof{
+            text-align: left !important;
+            margin-left: 1em;
+            font-size: 0.8rem;
+        }
+    }
+    .log{
+        padding-top: 8em;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 12em;
+        .topping{
+            position: relative;
+            white-space: nowrap;
+            background-color: white;
+            margin-left: 12em;
+            margin-right: 12em;
+        }
+    
+    }
+    
+
+}
+
+@media all and(max-width:776px){
+    .sign {
+        padding-top: 8em;
+        padding-left: 2em;
+        padding-right: 2em;
+        hr, #topper{
+            display: none;
+        }
+        form #inp {
+            border-radius: 125px;
+            padding: 8px;
+            border: 3px solid #4154f1;
+            margin-left: -2em;
+        }
+        form #proof{
+            text-align: left !important;
+            margin-left: 1em;
+            font-size: 0.8rem;
+        }
+    }
+
+    .log{
+        padding-top: 8em;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 12em;
+        .topping{
+            position: relative;
+            top: -30px;
+            white-space: nowrap;
+            background-color: white;
+            margin-left: 6em;
+            margin-right: 6em;
+        }
+        form{
+            #inp{
+                border-radius: 125px;
+                padding: 10px;
+                border: 3px solid $clr3;
+                width: 100%;
+            }
+        }
+    
+    }
+
+}
+
+
+
+
+
+
+
+
+
+.forgot{
+    padding-top: 8em;
+    padding-left:24em;
+    padding-right: 24em;
+    .forgot-center{
+        border: 2px solid $clr3;
+        border-radius: 15px;
+        padding: 15px;
+        #inp{
+            border-radius: 125px;
+            padding: 10px;
+            border: 3px solid $clr3;
+            width: 100%;
+        }
+        .spec-clr{
+            color: $clr2;
+            font-weight: 650;
+        }
+    }
+}
+
+@media all and (max-width:1286px){
+    .forgot{
+        padding-left: 6em;
+        padding-right: 6em;
+    }
+}

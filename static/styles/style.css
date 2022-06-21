@@ -1,0 +1,506 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: white;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background-color: transparent !important;
+  padding: 10px 0em 2em 2em;
+  position: fixed;
+  z-index: 2;
+  transition: all 1s;
+}
+.navbar .navbar-brand {
+  font-size: 2rem;
+  color: #012970;
+  font-weight: 700;
+  padding: 10px 0em 0em 2em;
+}
+.navbar .nav-item {
+  padding-left: 2em;
+  padding: 10px 0em 0em 2em;
+  font-size: 1.2rem;
+  font-weight: 550;
+}
+.navbar .nav-item .nav-link {
+  color: #013289 !important;
+  white-space: nowrap;
+}
+.navbar .nav-item .activate {
+  color: #013289 !important;
+}
+.navbar .nav-item .sign-a {
+  text-decoration: none;
+  font-size: 1rem;
+}
+.navbar .nav-item .sign-a button {
+  padding: 7.8px;
+  border-radius: 4px;
+  background-color: #4154f1;
+  color: white !important;
+  font-weight: 700;
+  border-color: #4154f1;
+}
+.navbar .nav-item .disabled-color {
+  color: gray !important;
+}
+
+.remain-flex {
+  display: flex;
+  margin-top: -15px;
+  margin-bottom: -33px;
+  padding: 17px;
+}
+
+#sign {
+  flex-grow: 0.5;
+  text-align: right;
+}
+
+#hid {
+  display: none;
+}
+
+@media all and (max-width: 1280px) {
+  .remain-flex {
+    display: none;
+  }
+
+  #hid {
+    display: unset;
+  }
+
+  .hid-button {
+    position: relative;
+    left: 17em;
+  }
+}
+@media all and (max-width: 776px) {
+  .navbar .navbar-brand {
+    padding: 10px 0em 0em 0.5em;
+  }
+}
+.hero {
+  opacity: 1;
+}
+.hero .row {
+  padding: 10em 15em 10em 8em;
+  background-image: url("../assets/hero-bg.png");
+  background-size: auto;
+  z-index: 1;
+  perspective: 3500px;
+  background-repeat: no-repeat;
+}
+.hero .row h1 {
+  color: #013289;
+  font-weight: 600;
+  font-size: 3rem;
+  padding-top: 40px;
+}
+.hero .row .sub-head {
+  font-size: 2.4rem;
+  opacity: 80%;
+  color: grey;
+  padding: 5px;
+}
+.hero .row img {
+  max-width: 120%;
+}
+
+@media all and (max-width: 776px) {
+  .hero .row img {
+    max-width: 180%;
+    padding-top: 2em;
+  }
+
+  .hid-button {
+    position: relative;
+    left: 12em;
+  }
+
+  .hero .row {
+    padding: 10em 8em 10em 6em;
+  }
+  .hero .row h1 {
+    font-size: 2.4rem;
+  }
+  .hero .row .sub-head {
+    font-size: 2rem;
+  }
+
+  .navbar .nav-item {
+    background-color: white;
+  }
+
+  body {
+    width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  .cursor {
+    font-size: 2rem;
+  }
+}
+@media all and (max-width: 1280px) {
+  .hero .row img {
+    max-width: 180%;
+    padding-top: 2em;
+  }
+}
+.cursor {
+  color: red;
+  font-weight: 600;
+  font-size: 3rem;
+  -webkit-animation-name: blink;
+          animation-name: blink;
+  -webkit-animation-duration: 780ms;
+          animation-duration: 780ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: -1ms;
+          animation-delay: -1ms;
+}
+
+@-webkit-keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.secondpage {
+  padding: 10em 15em 10em 8em;
+  background-image: url("../assets/hero-bg.png");
+  background-size: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.secondpage .box-head {
+  border: 5px solid transparent;
+  border-top-color: #4154f1;
+  padding: 40px;
+  background-color: white;
+  margin: 0.4em;
+  transition: all 1s;
+  opacity: 0;
+  box-shadow: 2.7px 1.5px 2.7px rgba(0, 0, 0, 0.065), 6.9px 3.9px 6.9px rgba(0, 0, 0, 0.093), 14px 8px 14.2px rgba(0, 0, 0, 0.117), 28.8px 16.4px 29.2px rgba(0, 0, 0, 0.145), 79px 45px 80px rgba(0, 0, 0, 0.21);
+}
+.secondpage .box-head:hover {
+  transform: scale(1.1) !important;
+}
+
+.explained {
+  padding: 4em;
+  margin: 6em;
+}
+.explained .explain-head {
+  margin-bottom: 6em;
+}
+.explained h3 {
+  color: gray;
+  font-size: 3rem;
+}
+.explained .game {
+  color: #013289;
+  display: inline-block;
+}
+.explained p {
+  font-size: 2rem;
+  opacity: 80%;
+}
+.explained .para {
+  border-left: 2px solid #4154f1;
+  font-size: 2rem;
+  perspective: 2000px;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  opacity: 1;
+  transition: all 1.6s ease-in;
+}
+.explained .row {
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.explained .text-1 {
+  transform: translateX(-180%);
+}
+.explained .text-2 {
+  transform: translateX(180%);
+}
+
+@media all and (max-width: 776px) {
+  .explained {
+    padding: 1em;
+    margin: 2em;
+  }
+  .explained h3 {
+    font-size: 2.5rem;
+  }
+  .explained p {
+    font-size: 1.8rem;
+  }
+  .explained .row {
+    padding-left: 0.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-right: 0.5em;
+  }
+}
+@media all and (max-width: 1280px) {
+  .secondpage {
+    padding: 10em 2em 10em 2em;
+  }
+}
+.href {
+  text-decoration: none;
+  font-size: large;
+}
+.href i:hover {
+  color: #013289 !important;
+  font-size: larger;
+}
+
+.sign {
+  padding-top: 8em;
+  padding-left: 22em;
+  padding-right: 22em;
+}
+.sign .man {
+  color: #013289;
+}
+.sign .bord {
+  border: 2px solid #4154f1;
+  border-radius: 15px;
+}
+.sign #topper {
+  position: relative;
+  top: -30px;
+  background-color: white;
+  white-space: nowrap;
+  text-align: center;
+  margin-left: 15em;
+  margin-right: 15em;
+}
+.sign h3 {
+  color: #013289;
+  font-weight: 650;
+}
+.sign form .msg {
+  font-size: 1rem;
+  border: 2px solid yellow;
+  border-radius: 40px;
+  padding: 5px;
+}
+.sign form #inp {
+  border-radius: 125px;
+  padding: 10px;
+  border: 3px solid #4154f1;
+  width: 100%;
+}
+.sign form #inp:focus {
+  border: 1px solid #012970;
+}
+.sign form #proof, .sign form #proof2 {
+  text-align: left !important;
+  margin-left: 9em;
+  margin-right: 20em;
+  color: gray;
+  opacity: 85%;
+  white-space: nowrap;
+}
+.sign form #proof2 {
+  color: #012970;
+  font-weight: 650;
+}
+
+.log {
+  padding-top: 8em;
+  padding-left: 26em;
+  padding-right: 26em;
+  padding-bottom: 2em;
+}
+.log .box-log {
+  border: 2px solid #4154f1;
+  border-radius: 15px;
+}
+.log h3 {
+  color: #013289;
+  font-weight: 650;
+}
+.log .topping {
+  position: relative;
+  top: -30px;
+  background-color: white;
+  margin-left: 15em;
+  margin-right: 15em;
+}
+.log form #inp {
+  border-radius: 125px;
+  padding: 10px;
+  border: 3px solid #4154f1;
+  width: 100%;
+}
+.log form #inp:focus {
+  border: 1px solid #012970;
+}
+.log form a {
+  text-decoration: none;
+  color: #012970;
+}
+.log form .hid-forgot {
+  display: none;
+  color: #e85d04;
+}
+.log form .forgot-a {
+  color: #013289;
+}
+
+.row-table {
+  margin-left: 6em;
+  margin-right: 6em;
+  margin-top: 11.4em;
+}
+.row-table h3 {
+  color: gray;
+  font-size: 3rem;
+}
+.row-table .game {
+  color: #013289;
+  display: inline-block;
+}
+
+@media all and (max-width: 1512px) {
+  .sign {
+    padding-top: 8em;
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+  .sign #topper {
+    margin-left: 14em;
+    margin-right: 15em;
+  }
+  .sign form #inp {
+    border-radius: 125px;
+    padding: 8px;
+    border: 3px solid #4154f1;
+    margin-left: -2em;
+  }
+  .sign form #proof, .sign form #proof2 {
+    text-align: left !important;
+    margin-left: 1em;
+    font-size: 0.8rem;
+  }
+
+  .log {
+    padding-top: 8em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 12em;
+  }
+  .log .topping {
+    position: relative;
+    white-space: nowrap;
+    background-color: white;
+    margin-left: 12em;
+    margin-right: 12em;
+  }
+}
+@media all and (max-width: 776px) {
+  .sign {
+    padding-top: 8em;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  .sign hr, .sign #topper {
+    display: none;
+  }
+  .sign form #inp {
+    border-radius: 125px;
+    padding: 8px;
+    border: 3px solid #4154f1;
+    margin-left: -2em;
+  }
+  .sign form #proof, .sign form #proof2 {
+    text-align: left !important;
+    margin-left: 1em;
+    font-size: 0.8rem;
+  }
+
+  .log {
+    padding-top: 8em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 12em;
+  }
+  .log .topping {
+    position: relative;
+    top: -30px;
+    white-space: nowrap;
+    background-color: white;
+    margin-left: 6em;
+    margin-right: 6em;
+  }
+  .log form #inp {
+    border-radius: 125px;
+    padding: 10px;
+    border: 3px solid #4154f1;
+    width: 100%;
+  }
+}
+.forgot {
+  padding-top: 8em;
+  padding-left: 24em;
+  padding-right: 24em;
+}
+.forgot .forgot-center {
+  border: 2px solid #4154f1;
+  border-radius: 15px;
+  padding: 15px;
+}
+.forgot .forgot-center #inp {
+  border-radius: 125px;
+  padding: 10px;
+  border: 3px solid #4154f1;
+  width: 100%;
+}
+.forgot .forgot-center .spec-clr {
+  color: #013289;
+  font-weight: 650;
+}
+
+@media all and (max-width: 1286px) {
+  .forgot {
+    padding-left: 6em;
+    padding-right: 6em;
+  }
+}/*# sourceMappingURL=style.css.map */

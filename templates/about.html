@@ -1,0 +1,41 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="row secondpage">
+    <div class="col-md-3"><h3 class="box-head h-1">Would you love to buy anything this month?</h3> </div>
+    <div class="col-md-3"><h3 class="box-head h-1">See the amount of money left on your wallet</h3></div>
+    <div class="col-md-3"><h3 class="box-head h-1">Plan things wisely to win this money management game</h3></div>
+    <div class="col-md-3"><h3 class="box-head h-1"> Don't have enough money? Try selling something </h3></div>
+</div>
+{% endblock %}
+
+{% block main %}
+    <div class="row text-center row-table">
+        <h3 class="pb-4 mb-4">Top &nbsp;<span class="game"> Scores</span></h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>User</th>
+                <th>Balance</th>
+                <th>Money spent</th>
+                <th>Money lost</th>
+            </tr>
+        </thead>
+    <tbody>
+    {% for item in items %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.budget}}</td>
+            <td>{{item.spent}}</td>
+            <td>{{item.lost}}</td>
+            <td><button type="button" class="btn btn-outline btn-info">Sell</button>
+            <button type="button" class="btn btn-outline btn-warning">More Info</button></td>
+        </tr>        
+    {% endfor %}
+    </tbody>
+    </table>
+    </div>
+
+{% endblock %}

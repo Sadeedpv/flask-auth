@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="keywords" content="Finance game, market game, online games, most interesting online games">
+    <meta name="author" content="Sadeed pv">
+    <meta name="description" content="Choose or Die! This is an online money management game. Click this link to see it for yourself, Good Luck">
+    <meta name=”robots” content="index, follow">
+
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- local stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+    <script src="{{ url_for('static',filename='assets/script.js') }}"> </script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
+
+    <title>Manage it!</title>
+</head>
+<body>
+  <section class="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/home">Manage</a>
+          <div class="col col-button"><button class="navbar-toggler ms-auto hid-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon ms-auto"></span>
+          </button></div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">Market</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  More actions
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  {% if not loggedin %}
+                    <li><a class="dropdown-item" href="/buy">Buy</a></li>
+                  {% else %}
+                    <li><a class="dropdown-item disabled" href="#">Buy</a></li>
+                  {% endif %}              
+                  <li class="dropdown-divider"></li>
+
+                  {% if not loggedin %}
+                    <li><a class="dropdown-item" href="/sell">Sell</a></li>
+                  {% else %}
+                    <li><a class="dropdown-item disabled" href="#">Sell</a></li>
+                  {% endif %}
+                  <li class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/sign-in" id="hid">Sign-in</a></li>
+                  <li class="dropdown-divider"></li>
+                  {% if loggedin %}
+                    <li><a class="dropdown-item" href="/log-in" id="hid">Log-in</a></li>
+                  {% else %}
+                    <li><a class="dropdown-item disabled" href="/log-in" id="hid">Log-in</a></li>
+                  {% endif %}
+                  <li class="dropdown-divider"></li>
+                  {% if not loggedin %}
+                    <li><a href="/logout" class="dropdown-item">Logout</a></li>
+                  {% else %}
+                    <li><a href="#" class="dropdown-item disabled">Logout</a></li>
+                  {% endif %}
+
+                    
+
+                    
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                {% if not loggedin %}
+                  <a class="nav-link activate" href="#">Your account</a>
+                {% else %}
+                  <a class="nav-link disabled disabled-color">Your account</a>
+                {% endif %}
+              </li>
+
+              <div class="remain-flex col-12"><li class="nav-item" id="sign">
+                <a class="sign-a " href="/sign-in"><button type="button" class="btn btn-info">Sign-in</button></a>
+              </li>
+              <li class="nav-item" id="sign2">
+                {% if loggedin %}
+                  <a class="sign-a" href="/log-in"><button type="button" class="btn btn-info">Log in</button></a>
+                {% else %}
+                  <a class="sign-a" href="#" class="disabled"><button type="button" class="btn btn-info disabled">Log in</button></a>
+                {% endif %}
+
+                  
+              </li></div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+    {% block content %}
+
+      <section class="hero">
+          <div class="row"><div class="col-md-6 head"><h1>Buy and grow your business <br> in virtual market</h1><p class="sub-head"><strong>You could</strong> <span class="edit"></span> <span class="cursor">|</span></p></div>
+        <div class="col-md-6"><img src="static/assets/hero.png" alt="" class="img"></div></div>
+      </section>
+
+      {% endblock %}
+
+
+      {% block main %}
+
+      <section class="explained">
+        <div class="col text-center explain-head"><h3>This is a &nbsp;<span class="game"> Game!</span></h3> <br> 
+        <p class="text-center">A personal money management <strong>game</strong> and this is how it works.</p></div>
+
+        <section class="observe">
+
+        <div class="row text-center"><div class="col-md-6 para text-1">This game could tell how good you are in managing money</div><div class="col-md-6"></div></div>
+        <div class="row text-center"><div class="col-md-6"></div><div class="col-md-6 para text-2">You will be given a set of amount in the beginning</div></div>
+        <div class="row text-center"><div class="col-md-6 para text-1">You will have to spend a lot of money exactly like you spend in your daily life</div><div class="col-md-6"></div></div>
+        <div class="row text-center"><div class="col-md-6"></div><div class="col-md-6 para text-2">One who manages to keep the most amount in the end of the month wins!</div></div>
+
+      </section>
+
+
+      </section>
+
+      {% endblock %}
+
+      <footer>
+        <div class="col text-center p-4">2022 All rights reserved <i class="fa fa-copyright"></i> <br> <a href="https://github.com/Sadeedpv" class="p-1 href"><i class="fa fa-github"></i></a>  <a href="#" class="p-1 href"><i class="fa fa-instagram"></i></a></div>
+      </footer>
+
+
+
+
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+    <!-- Iconsicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Anime -->
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script>
+
+    anime({
+      targets: '.head',
+      translateX:[-1000, 0],
+      duration: 3000,
+      delay:800
+
+    })
+
+    anime({
+      targets: '.img',
+      translateX:[1000, 0],
+      duration:3000,
+      delay:1200
+    })
+
+    anime({
+      targets:'.h-1',
+      translateX:[-9400,0],
+      easing: 'easeInOutQuad',
+      opacity:1,
+      delay:anime.stagger(250)
+    })
+    anime({
+      targets:'.h-2',
+      translateY:[-9400,0],
+      easing: 'easeInOutQuad'
+    })
+    anime({
+      targets:'.h-3',
+      translateY:[9400,0],
+      easing: 'easeInOutQuad'
+    })
+    anime({
+      targets:'.h-4',
+      translateX:[9400,0],
+      easing: 'easeInOutQuad'
+    })
+
+    anime({
+      targets:'.game',
+      scale:1.2,
+      loop:true,
+      direction:'alternate'
+    })
+    </script>
+</body>
+</html>

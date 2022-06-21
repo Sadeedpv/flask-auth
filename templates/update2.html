@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% block content %}
+
+<div class="row log">
+    <div class="col text-center box-log">
+        <h3 class="mb-2 p-5">Update Password</h3><hr>
+    <form action="#" method="post">
+        {{form.hidden_tag()}}
+        {% if msg %}
+            <p class="m-5 bg-warning bg-opacity-25 msg">{{msg}} !</p>
+        {% endif %}
+        <p id="proof">{{form.password1.label()}}</p>
+        {{form.password1(id="inp", placeholder="Enter your Password")}}
+        {{form.submit(class="mb-3 mt-3",placeholder="{{form.submit.label()}}", id="inp")}}
+
+    </form>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block main %}
+{% endblock %}

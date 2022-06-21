@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+
+{% block content %} 
+
+{% endblock %}
+
+{% block main %}
+
+<div class="row text-center sign">
+    <div class="col bord mb-2 p-5"><h3 class="man">Sign-in</h3>
+    <p class="sub-sign mb-5 text-center">Are you ready for the game?</p>
+    <hr>
+    <p id="topper">Sign-in to register for the game</p>
+    <form action="#" method="post">
+        {{form.hidden_tag()}}
+        
+    {% if message %}
+    <p class="m-5 bg-warning bg-opacity-25 msg">{{message}} !</p>
+    {% endif %}
+        <p>{{form.email.label()}}</p>
+        {{form.email(class="mb-3",placeholder="Enter your gmail id", id="inp")}}
+        <p>{{form.username.label()}}</p>
+        {{form.username(class="mb-3",placeholder="Type your username", id="inp")}}
+        <p>{{form.password1.label()}}</p>
+        {{form.password1(class="mb-3",placeholder="Enter a password", id="inp")}}
+        <p>{{form.password2.label()}}</p>
+        {{form.password2(class="mb-3",placeholder="Confirm password", id="inp")}}
+        <p id="proof2">Remember me (We always remember you)</p>
+        {{form.submit(class="mb-3",placeholder="{{form.submit.label()}}", id="inp")}}
+        
+    </form>
+    </div>
+</div>
+{% endblock %}
