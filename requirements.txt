@@ -32,7 +32,6 @@ pexpect==4.8.0
 Pillow==9.0.1
 pipwin==0.5.1
 ptyprocess==0.7.0
-PyAudio @ file:///C:/Users/hp/pipwin/PyAudio-0.2.11-cp310-cp310-win_amd64.whl
 pycparser==2.21
 pyjsparser==2.7.1
 pyparsing==3.0.7
