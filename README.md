@@ -1,13 +1,13 @@
 <h1 align='center'> Flask-auth 📲</h1>
 
-Hello, this repo contains Flask-authentication sample in Python 🚀
+Flask-authentication sample in Python 🚀
 
 That means;
 A user can:
 - Sign-in
 - Log-in
 - Reset your password
-- Gmail confirmation after signin in
+- Email confirmation after signing in
 
 This app is smart enough to:
 
